@@ -1,0 +1,48 @@
+# Виртуальное окружение
+venv/
+env/
+ENV/
+.venv/
+
+# Файлы с секретами
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py.class
+*.so
+*.dll
+*.dylib
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Базы данных
+*.db
+*.sqlite3
+*.sqlite
+
+# Логи
+*.log
+logs/
+
+# Redis
+dump.rdb
+
+# Тестовые файлы
+test_*.py
+*_test.py
+
+# Временные файлы
+*.tmp
+*.temp
+Thumbs.db
