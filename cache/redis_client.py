@@ -92,5 +92,18 @@ class RedisClient:
             logger.error(f"Error checking {e}")
             return False
 
+    def clear_all(self, pattern: str = "*") -> int:
+        if not self.is_connected():
+            return 0
+
+        try:
+            keys = self.client.keys(pattern)
+            if keys:
+                return self.client.delete(*keys)
+            return 0
+        except Exception as e:
+            logger.error(f"Error clear: {e}")
+            return 0
+
 redis_client = RedisClient()
 
